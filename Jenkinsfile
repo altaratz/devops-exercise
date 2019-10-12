@@ -8,13 +8,13 @@ node
     stage ('Build Image')
     {
         echo 'Docker build'
-        sh 'docker build -t altaratz/climacelltest:${BUILD_NUMBER} .'
+        sh 'docker build -t krejenkinstest/testing:${BUILD_NUMBER} .'
     }
 
     stage ('Deploy to DockerHub')
     {
         echo 'Pushing to DockerHub'
-        sh 'docker push altaratz/climacelltest:${BUILD_NUMBER}'
+        sh 'docker push docker push krejenkinstest/testing:${BUILD_NUMBER}'
     }
 
 }
